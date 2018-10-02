@@ -1,0 +1,10 @@
+[Unit]
+Description=Shutdown Raspi via push button
+After=multi-user.target
+
+[Service]
+Type=idle
+ExecStart=/home/pi/shutdown/shutdown.py &
+
+[Install]
+WantedBy=multi-user.target
